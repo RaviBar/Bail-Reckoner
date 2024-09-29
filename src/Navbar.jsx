@@ -1,54 +1,42 @@
 import React, { useState } from 'react';
 import {
-  AppBar, Toolbar, Button, IconButton, Menu, MenuItem, Box, Tooltip
+  AppBar, Toolbar, Button, Menu, MenuItem, Box, Tooltip
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [dropdownAnchorEl, setDropdownAnchorEl] = useState(null);
-  
-  const handleMenuClick = (event) => {
+  const [menuItems, setMenuItems] = useState([]);
+
+  const handleDropdownOpen = (event, items) => {
     setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleDropdownOpen = (event) => {
-    setDropdownAnchorEl(event.currentTarget);
+    setMenuItems(items);
   };
 
   const handleDropdownClose = () => {
-    setDropdownAnchorEl(null);
+    setAnchorEl(null);
+    setMenuItems([]);
   };
-
-  const handleLogout = () => {
-    alert('You have been logged out.');
-    localStorage.setItem('token', null);
-    window.location = '/';
-  };
-
-  const handleRemoveAccount = () => {
-    alert('Your account has been removed.');
-    // Add your account removal logic here
-  };
-
-  const open = Boolean(anchorEl);
-  const dropdownOpen = Boolean(dropdownAnchorEl);
 
   return (
     <AppBar position="static" sx={{ backgroundColor: 'white', color: 'black', boxShadow: 'none', mt: -1, mb: 0 }}>
       <Toolbar sx={{ px: 2, py: 1, justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {/* Judges Dropdown */}
           <Tooltip arrow>
             <Button
-              onClick={handleDropdownOpen}
-              sx={{ 
-                color: 'black', 
-                textTransform: 'none', 
-                position: 'relative', 
+              onClick={(event) =>
+                handleDropdownOpen(event, [
+                  { label: 'Judge Profile', action: handleDropdownClose },
+                  { label: 'Select Bail Applications', action: handleDropdownClose },
+                  { label: 'Schedule Court Hearings', action: handleDropdownClose },
+                  { label: 'Evaluate Risk assessment', action: handleDropdownClose },
+                  { label: 'Check Bail Prediction', action: handleDropdownClose },
+                ])
+              }
+              sx={{
+                color: 'black',
+                textTransform: 'none',
                 textDecoration: 'none',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -56,43 +44,50 @@ const Navbar = () => {
               }}
             >
               Judges
-              <ExpandMoreIcon 
-                sx={{ 
-                  transition: 'transform 0.3s ease',
-                  ml: 1 
-                }} 
-              />
+              <ExpandMoreIcon sx={{ transition: 'transform 0.3s ease', ml: 1 }} />
             </Button>
           </Tooltip>
+
+          {/* Legal Aid Provider Dropdown */}
           <Tooltip arrow>
             <Button
-              onClick={handleDropdownOpen}
-              sx={{ 
-                color: 'black', 
-                textTransform: 'none', 
-                position: 'relative', 
+              onClick={(event) =>
+                handleDropdownOpen(event, [
+                  { label: 'Lawyer Profile', action: handleDropdownClose },
+                  { label: 'Select Pending Cases', action: handleDropdownClose },
+                  { label: 'Prepare Bail Application', action: handleDropdownClose },
+                  { label: 'Submit to judicial authority', action: handleDropdownClose },
+                ])
+              }
+              sx={{
+                color: 'black',
+                textTransform: 'none',
                 textDecoration: 'none',
                 '&:hover': {
                   textDecoration: 'underline',
                 },
               }}
             >
-            Legal Aid Provider
-             <ExpandMoreIcon 
-                sx={{ 
-                  transition: 'transform 0.3s ease',
-                  ml: 1 
-                }} 
-              />
+              Legal Aid Provider
+              <ExpandMoreIcon sx={{ transition: 'transform 0.3s ease', ml: 1 }} />
             </Button>
           </Tooltip>
+
+          {/* e-Services Dropdown */}
           <Tooltip arrow>
             <Button
-              onClick={handleDropdownOpen}
-              sx={{ 
-                color: 'black', 
-                textTransform: 'none', 
-                position: 'relative', 
+              onClick={(event) =>
+                handleDropdownOpen(event, [
+                  { label: 'Online eligibility check', action: handleDropdownClose },
+                  { label: 'e-Court Services', action: handleDropdownClose },
+                  { label: 'Apply for Bail', action: handleDropdownClose },
+                  { label: 'Hire Legal Aid Provider', action: handleDropdownClose },
+                  { label: 'Real-time case tracking', action: handleDropdownClose },
+                ])
+              }
+              sx={{
+                color: 'black',
+                textTransform: 'none',
                 textDecoration: 'none',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -100,21 +95,22 @@ const Navbar = () => {
               }}
             >
               e-Services
-              <ExpandMoreIcon 
-                sx={{ 
-                  transition: 'transform 0.3s ease',
-                  ml: 1 
-                }} 
-              />
+              <ExpandMoreIcon sx={{ transition: 'transform 0.3s ease', ml: 1 }} />
             </Button>
           </Tooltip>
+
+          {/* Newsletters Dropdown */}
           <Tooltip arrow>
             <Button
-              onClick={handleDropdownOpen}
-              sx={{ 
-                color: 'black', 
-                textTransform: 'none', 
-                position: 'relative', 
+              onClick={(event) =>
+                handleDropdownOpen(event, [
+                  { label: 'Get Latest News', action: handleDropdownClose },
+                  { label: 'Subscribe to Newsletters', action: handleDropdownClose },
+                ])
+              }
+              sx={{
+                color: 'black',
+                textTransform: 'none',
                 textDecoration: 'none',
                 '&:hover': {
                   textDecoration: 'underline',
@@ -122,63 +118,29 @@ const Navbar = () => {
               }}
             >
               Newsletters
-              <ExpandMoreIcon 
-                sx={{ 
-                  transition: 'transform 0.3s ease',
-                  ml: 1 
-                }} 
-              />
+              <ExpandMoreIcon sx={{ transition: 'transform 0.3s ease', ml: 1 }} />
             </Button>
           </Tooltip>
-          
-            <Button
-              sx={{ 
-                color: 'black', 
-                textTransform: 'none' 
-              }}
-            >
-              Chat with AI
-            </Button>
-          <Menu
-            anchorEl={dropdownAnchorEl}
-            open={dropdownOpen}
-            onClose={handleDropdownClose}
-            PaperProps={{
-              sx: {
-                width: 200,
-                maxWidth: '100%',
-                bgcolor: 'background.paper',
-                boxShadow: 'none',
-                mt: 1
-              },
-            }}
-          >
-            <MenuItem onClick={handleDropdownClose}>Your Profile</MenuItem>
-            <MenuItem onClick={handleDropdownClose}>Track Case Status</MenuItem>
-            <MenuItem onClick={handleDropdownClose}>Check Bail Eligibility</MenuItem>
-            <MenuItem onClick={handleRemoveAccount}>Remove Account</MenuItem>
-          </Menu>
+
+          {/* Chat with AI Button */}
+          <Button sx={{ color: 'black', textTransform: 'none' }}>Chat with AI</Button>
         </Box>
 
+        {/* Single Menu for All Dropdowns */}
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
-          onClose={handleMenuClose}
+          onClose={handleDropdownClose}
+          disableScrollLock
           PaperProps={{
-            sx: {
-              width: 250,
-              maxWidth: '100%',
-              bgcolor: 'background.paper',
-              boxShadow: 'none',
-              mt: 1
-            },
+            sx: { width: 220, bgcolor: 'background.paper', boxShadow: 'none', mt: 1 },
           }}
-          sx={{ mt: 2 }}
         >
-          <MenuItem onClick={handleMenuClose}>Your Profile</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Track Case Status</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Check Bail Eligibility</MenuItem>
-          <MenuItem onClick={handleRemoveAccount}>Remove Account</MenuItem>
+          {menuItems.map((item, index) => (
+            <MenuItem key={index} onClick={item.action}>
+              {item.label}
+            </MenuItem>
+          ))}
         </Menu>
       </Toolbar>
     </AppBar>

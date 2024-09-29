@@ -3,11 +3,11 @@ import { IconButton, Card, CardContent, Typography, Box, CardMedia } from '@mui/
 
 // Sample card data
 const cardData = [
-  { id: 1, title: 'Bail Eligibility Checker', description: 'Find out if you are eligible for bail.', image: 'https://2.bp.blogspot.com/-H7XdLYcE1Kc/WLj_1E2aRxI/AAAAAAAAAZA/CF0OPYtTsiwrz5s221rl7KwyyCQAjvjNACEw/s640/aadhaar%2Bekyc%2Beligibility.jpg' },
-  { id: 5, title: 'Bail Prediction', description: 'Predict the bail amount based on your case details.', image: 'https://tse1.mm.bing.net/th?id=OIP.qRCHhbEgObNaNvKVMfix-QHaEK&pid=Api&P=0&h=180' },
-  { id: 4, title: 'Court Hearing Tracker', description: 'Track your upcoming court hearings.', image: 'https://tse4.mm.bing.net/th?id=OIP.JIG5mY4CmtXawWfcgFsQRwHaE8&pid=Api&P=0&h=180' },
-  { id: 2, title: 'Legal Templates', description: 'Access ready-to-use legal templates.', image: 'https://i.pinimg.com/736x/1a/1c/67/1a1c67bfd47ccdde72be067c476e3e21.jpg' },
-  { id: 3, title: 'Lawyer Directory', description: 'Connect with experienced lawyers.', image: 'https://tse1.mm.bing.net/th?id=OIP.UXwhq6l1yeotP-HxUza-qAHaFj&pid=Api&P=0&h=180' },
+  { id: 1, title: 'Bail Eligibility Checker', description: 'Find out if you are eligible for bail.', image: 'src/assets/check-eligibily-card.jpeg' },
+  { id: 5, title: 'Bail Prediction', description: 'Predict the bail amount based on your case details.', image: 'src/assets/artificial-intelligence-and-its-impact-on-legal-te-1024x683.webp' },
+  { id: 4, title: 'Court Hearing Tracker', description: 'Track your upcoming court hearings.', image: 'src/assets/court-hearing-card.jpeg' },
+  { id: 2, title: 'Legal Templates', description: 'Access ready-to-use legal templates.', image: 'src/assets/legal-templates.jpeg' },
+  { id: 3, title: 'Lawyer Directory', description: 'Connect with experienced lawyers.', image: 'src/assets/lawyer-directory-card.jpeg' },
 ];
 
 const Carousel = () => {

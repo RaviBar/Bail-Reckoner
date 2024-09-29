@@ -66,14 +66,14 @@ function MainPage() {
           <Carousel />
 
           {/* Bail Reckoner Information Section */}
-          <Box sx={{ my: 5 }}>
+          <Box sx={{ my: 5 }}  >
             <Typography variant="h4" gutterBottom>
               About Bail Reckoner
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic', fontSize: '20px', lineHeight: 1.6, textAlign: 'justify', color: "black"}} >
               Bail Reckoner is a comprehensive platform designed to assist undertrial-prisoners, lawyers, and judicial authorities. Our mission is to streamline the bail process, providing valuable resources, tools, and information to all stakeholders involved. From tracking court hearings to accessing legal templates, Bail Reckoner aims to simplify the complexities of the legal system and support informed decision-making.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic', fontSize: '20px', lineHeight: 1.6, textAlign: 'justify', color: "black"}}   >
               Whether you're a prisoner seeking bail, a lawyer needing legal documentation, or a judicial authority managing cases, our platform offers the necessary tools and support to navigate the legal landscape efficiently. Explore our features to learn more about how we can assist you.
             </Typography>
           </Box>

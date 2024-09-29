@@ -5,11 +5,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useNavigate } from 'react-router-dom';
 
 const sliderImages = [
-  'https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2023/10/SCI-banner.jpg',
-  'https://www.legaleraonline.com/h-upload/2021/04/16/458208-indian-courts.jpg',
-  'https://static.vecteezy.com/system/resources/thumbnails/036/990/198/original/figure-of-lady-justice-in-rotation-over-black-background-with-strands-of-smoke-free-video.jpg',
-  'http://cinemachaat.files.wordpress.com/2013/10/court-scene1.png',
-  'https://cdnbbsr.s3waas.gov.in/s388ef51f0bf911e452e8dbb1d807a81ab/uploads/2022/03/2022030825.jpg',
+  'src/assets/high-court.jpg',
+  'src/assets/court-scene1.png',
+  'src/assets/458208-indian-courts.jpg',
+  'src/assets/SCI-banner.jpg',
+  'src/assets/Under-Trial-Prisoners.png',
+  'src/assets/courts-india.jpg',
 ];
 
 const ImageSlider = () => {
@@ -36,7 +37,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
+    <Box sx={{ position: 'relative', width: '100%', height: '520px', objectFit: '', overflow: 'hidden' }}>
       {/* Slider Images */}
       <Box
         sx={{
@@ -146,7 +147,7 @@ const ImageSlider = () => {
 </Typography>
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           borderRadius='5px'
 
           onClick={() => navigate('/')}

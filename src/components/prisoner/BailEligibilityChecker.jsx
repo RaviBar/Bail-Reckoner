@@ -107,7 +107,7 @@ function BailEligibilityChecker() {
   };
 
   const handleApplyForBail = () => {
-    alert('Applied for bail');
+    alert('your bail request will show to legal aid providers');
   };
 
   return (
@@ -192,7 +192,7 @@ function BailEligibilityChecker() {
                           sx={{ py: 1, fontSize: '0.75rem' }}
                           onClick={handleApplyForBail}
                         > 
-                          Apply for Bail
+                          Hire Legal aid provider
                         </Button>
                       </CardActions>
                     )}

@@ -34,7 +34,7 @@ function Appbar() {
         display: 'flex',
         justifyContent: 'space-between',
         padding: 1,
-        backgroundColor: '#3d0538'
+        backgroundColor: '#0988fa'
       }}
     >
         {/* Logo Section */}
@@ -96,9 +96,9 @@ function Appbar() {
               variant="contained"
               color="secondary"
               onClick={handleModalOpen}
-              sx={{ marginRight: 2, height: 50, alignItems:'center', marginTop: 1}}
+              sx={{ marginRight: 2, height: 40, width: 90, alignItems:'center', marginTop: 1.5}}
             >
-              Sign Up / <br /> Sign In
+              LOGIN
             </Button>
           </>
         )}
