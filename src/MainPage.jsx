@@ -3,7 +3,7 @@ import { Button, Box, Typography, Container, Accordion, AccordionSummary, Accord
 import { useNavigate } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ImageSlider from './ImageSlider';
-import Carousel from './carousel';
+import Carousel from './Carousel';
 import Navbar from './Navbar'; 
 
 function MainPage() {
