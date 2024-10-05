@@ -4,7 +4,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
 import prisonerImage from '../../assets/prisoner_PNG13.png';
-import lawyerImage from '../../assets/lawyer.jpeg';
+import lawyerImage from '../../assets/lawyer-png.jpeg';
 import judgeImage from '../../assets/judge-pngrepo-com.png';
 
 const modalStyle = {

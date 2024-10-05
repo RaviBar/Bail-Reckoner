@@ -3,11 +3,11 @@ import { IconButton, Card, CardContent, Typography, Box, CardMedia } from '@mui/
 
 // Sample card data
 const cardData = [
-  { id: 1, title: 'Bail Eligibility Checker', description: 'Find out if you are eligible for bail.', image: 'src/assets/check-eligibily-card.jpeg' },
-  { id: 5, title: 'Bail Prediction', description: 'Predict the bail amount based on your case details.', image: 'src/assets/artificial-intelligence-and-its-impact-on-legal-te-1024x683.webp' },
-  { id: 4, title: 'Court Hearing Tracker', description: 'Track your upcoming court hearings.', image: 'src/assets/court-hearing-card.jpeg' },
-  { id: 2, title: 'Legal Templates', description: 'Access ready-to-use legal templates.', image: 'src/assets/legal-templates.jpeg' },
-  { id: 3, title: 'Lawyer Directory', description: 'Connect with experienced lawyers.', image: 'src/assets/lawyer-directory-card.jpeg' },
+  { id: 1, title: 'Bail Eligibility Checker', description: 'Find out if you are eligible for bail.', image: 'https://tse1.mm.bing.net/th?id=OIP.2X6q-mvfVPdFhDbWciNAVwHaF7&pid=Api&P=0&h=180' },
+  { id: 5, title: 'Bail Prediction', description: 'Predict the bail amount based on your case details.', image: 'https://techcult.com/wp-content/uploads/2023/06/artificial-intelligence-and-its-impact-on-legal-te-1024x683.png' },
+  { id: 4, title: 'Court Hearing Tracker', description: 'Track your upcoming court hearings.', image: 'https://tse4.mm.bing.net/th?id=OIP.JIG5mY4CmtXawWfcgFsQRwHaE8&pid=Api&P=0&h=180' },
+  { id: 2, title: 'Legal Templates', description: 'Access ready-to-use legal templates.', image: 'https://tse4.mm.bing.net/th?id=OIP.hWxtulbFLmpzWh07KBBDRAAAAA&pid=Api&P=0&h=180' },
+  { id: 3, title: 'Lawyer Directory', description: 'Connect with experienced lawyers.', image: 'https://tse1.mm.bing.net/th?id=OIP.UXwhq6l1yeotP-HxUza-qAHaFj&pid=Api&P=0&h=180' },
 ];
 
 const Carousel = () => {
